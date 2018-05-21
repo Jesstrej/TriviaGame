@@ -1,0 +1,29 @@
+body {
+    background-image: url("../images/bgimage.jpg");
+}
+
+#title {
+    text-align: center;
+    color: purple;
+    font-weight: bold;
+}
+
+
+button.answerchoice {
+	display: none;
+}
+
+button:hover {
+	background-color: greenyellow;
+	color: white;
+}
+
+.answers div {
+	margin: 0 auto;
+}
+
+h1, h2, h3, .question {
+	text-align: center;
+}
+
+
