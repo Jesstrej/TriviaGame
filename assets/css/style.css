@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/bgimage.jpg");
+	background-image: url("../images/bgimage.jpg");
 }
 
 #title {
@@ -7,9 +7,11 @@ body {
     color: purple;
     font-weight: bold;
 }
+#rules {
+	color: greenyellow;
+}
 
-
-button.answerchoice {
+.buttonContainer {
 	display: none;
 }
 
@@ -24,6 +26,7 @@ button:hover {
 
 h1, h2, h3, .question {
 	text-align: center;
+	color: greenyellow;
 }
 
 

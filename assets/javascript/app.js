@@ -16,9 +16,10 @@ $(document).ready(function () {
         },
         count: function () {
             countdownTimer.time--;
-            console.log(countdownTimer.time);
+            //console.log(countdownTimer.time+"()");
+            //$(".timer").innerHTML=countdownTimer.time;
             if (countdownTimer.time >= 0) {
-                $(".timer").html("<h3" + countdownTimer.time + " seconds remaining</h3>");
+                $(".timer").html("<h3>" + countdownTimer.time + " seconds remaining</h3>");
             }
             else {
                 index++;
@@ -36,7 +37,6 @@ $(document).ready(function () {
         }
 
     }
-})
 
 var correct = 0;
 var wrong = 0;
@@ -96,11 +96,12 @@ function loadQuestion(questionSelection) {
     countdownTimer.reset();
 
     $(".question").html("<h3>" + questionArray[questionSelection].question + "</h3>");
-    $("#buttonA").text(questionArray[questionSelection].possibleAnswer)[0].show();
-    $("#buttonB").text(questionArray[questionSelection].possibleAnswers[1]).show();
-    $("#buttonC").text(questionArray[questionSelection].possibleAnswers[2]).show();
-    $("#buttonD").text(questionArray[questionSelection].possibleAnswers[3]).show();
-
+    $("#buttonA").text(questionArray[questionSelection].possibleAnswer[0]);
+    $("#buttonB").text(questionArray[questionSelection].possibleAnswer[1]);
+    $("#buttonC").text(questionArray[questionSelection].possibleAnswer[2]);
+    $("#buttonD").text(questionArray[questionSelection].possibleAnswer[3]);
+    $(".buttonContainer").show();
+       
 }
 
 function setup() {
@@ -196,4 +197,5 @@ if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
  	showScore();
  }
 });
+})
 
